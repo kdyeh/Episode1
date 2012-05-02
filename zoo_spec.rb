@@ -35,6 +35,20 @@ describe Panda do
 	end
 end
 
+describe Human do
+    it "should like bacon" do
+        Human.new.likes?(:bacon).should eq(true)
+    end
+
+    it "should like tacos" do
+        Human.new.likes?(:tacos).should eq(true)
+    end
+
+    it "should not like bamboo" do
+        Human.new.likes?(:bamoboo).should eq(false)
+    end
+end
+
 describe Lion do
 	it "should like wildebeests" do
 		Lion.new.likes?(:wildebeests).should eq(true)
@@ -75,3 +89,4 @@ describe Zookeeper do
 		Zookeeper.new.feed(food: :zeebras, to: lion)
 	end
 end
+

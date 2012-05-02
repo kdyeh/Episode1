@@ -26,6 +26,13 @@ module Animal
 
 end
 
+class Human
+    include Animal
+
+    def acceptable_food
+        [:bacon, :tacos]
+    end
+end
 
 class Panda
 	include Animal
@@ -58,6 +65,5 @@ class Zookeeper
 		panda = args.fetch(:to)
 		panda.eat(food)
 	end
-
 end
 
